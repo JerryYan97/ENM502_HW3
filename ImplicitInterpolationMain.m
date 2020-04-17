@@ -9,13 +9,13 @@ parameters = [a, b, c, d, p, q];
 
 t = 0;
 timestep = 0.001;
-Eco = [0.2; 0.2];
+Eco = [3; 2];
 idx = 1;
 EcoRecord(idx, 1) = Eco(1);
 EcoRecord(idx, 2) = Eco(2);
 tArray(idx) = t;
 idx = idx + 1;
-while t < 10
+while t < 100
     Eco = ImplicitEulerInterpolation(Eco, timestep, 0.001, parameters);
     t = t + timestep;
     EcoRecord(idx, 1) = Eco(1);
